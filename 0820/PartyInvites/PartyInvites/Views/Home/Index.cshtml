@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet"/>
+    <title>Index</title>
+    <style>
+        .btn a { color: #FFF; text-decoration: none;}
+        body { background-color: #F1F1F1;}
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        Hello World (form the view)<br />
+        @*從Controller來的參數*@
+        @ViewBag.Greeting<br />
+        <p style="color: red;">@ViewBag.Testing</p>
+        <p>
+            We're going to have an exciting party.<br />
+            (To do: sell it better. Add pictures or something.)
+        </p>
+
+        @*Html.ActionLink表示連結，第一個參數代表顯示名稱，第二個則是Controller內的動作名稱*@
+        <button class="btn btn-success">
+            @Html.ActionLink("RSVP Now", "RsvpForm")
+        </button>
+    </div>
+</body>
+</html>
